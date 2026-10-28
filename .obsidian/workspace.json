@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI agent.md",
+                "file": "01 Maps 导航/背景.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AI agent"
+              "title": "背景"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AI agent.md",
+                "file": "01 Maps 导航/背景.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AI agent.md",
+                "file": "01 Maps 导航/背景.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -191,9 +191,13 @@
   },
   "active": "29b99ac91c0f6b9e",
   "lastOpenFiles": [
+    "Skills.md",
+    "20 Knowledge 知识点/AI agent.md",
+    "20 Knowledge 知识点/MCP.md",
     "01 Maps 导航/背景.md",
-    "AI agent.md",
+    "workbuddy.md",
     "20 Knowledge 知识点/AI智能体.md",
+    "亚马逊运营+AI.md",
     "目录.md",
     "90 Templates 模板",
     "30 Projects 问题",
