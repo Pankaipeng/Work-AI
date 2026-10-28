@@ -11,10 +11,14 @@
             "id": "29b99ac91c0f6b9e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "01 Maps 导航/背景.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "背景"
             }
           }
         ]
@@ -95,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "01 Maps 导航/背景.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "目录.md",
+                "file": "01 Maps 导航/背景.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -184,8 +189,10 @@
       "bases:新建数据库": false
     }
   },
-  "active": "c85c97fe5cfb50bb",
+  "active": "29b99ac91c0f6b9e",
   "lastOpenFiles": [
+    "目录.md",
+    "01 Maps 导航/背景.md",
     "90 Templates 模板",
     "30 Projects 问题",
     "20 Knowledge 知识点",
@@ -193,7 +200,6 @@
     "00 Inbox 临时",
     "Test.md",
     "未命名.base",
-    "目录.md",
     "未命名 1.base",
     "未命名 2.base"
   ]
