@@ -139,12 +139,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "常驻型AI智能体.md",
+                "file": "图文生成AI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "常驻型AI智能体"
+              "title": "图文生成AI"
             }
           }
         ],
@@ -226,7 +226,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "常驻型AI智能体.md",
+                "file": "图文生成AI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -288,7 +288,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "常驻型AI智能体.md",
+                "file": "图文生成AI.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -318,13 +318,13 @@
   },
   "active": "18a2d6f942e2403e",
   "lastOpenFiles": [
+    "图片Skills.md",
+    "搜索词Skills.md",
+    "常驻型AI智能体.md",
     "Pasted image 20261029101838.png",
     "20 Knowledge 知识点/AI agent.md",
-    "常驻型AI智能体.md",
     "未命名.md",
     "图文生成AI.md",
-    "搜索词Skills.md",
-    "图片Skills.md",
     "01 Maps 导航/选品Skills.md",
     "20 Knowledge 知识点/领星MCP.md",
     "20 Knowledge 知识点/亚马逊MCP.md",
