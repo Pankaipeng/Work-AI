@@ -1,4 +1,7 @@
 AI Agent（人工智能智能体）是一个能够自主感知环境、设定目标、**调用工具**并逐步执行任务来达成目标的软件系统。
+![](https://assert.wearesellers.com/questions/20260903/0bb7de4fc5c17b0c3d27ecc71c1371af.png)
+
+
 ## 发展阶段
 
 2024年底 – 2025年：生成式AI向代理式AI过渡

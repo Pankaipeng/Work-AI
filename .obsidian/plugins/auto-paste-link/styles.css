@@ -1,0 +1,36 @@
+.auto-paste-link-section {
+  padding-top: 0.5em;
+  padding-bottom: 0.1em;
+}
+
+.auto-paste-link-setting-hint {
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.auto-paste-link-setting textarea {
+  min-height: 7em;
+  width: 100%;
+}
+
+.auto-paste-link-extension-setting textarea {
+  min-height: 3em;
+  width: 100%;
+}
+
+.auto-paste-link-subsection {
+  border-top: 1px solid var(--background-modifier-border);
+  margin-top: 0.35em;
+}
+
+.auto-paste-link-subsection-summary {
+  cursor: pointer;
+  font-weight: var(--font-semibold);
+  padding: 0.65em 0;
+}
+
+.auto-paste-link-subsection-content {
+  padding-left: 0.75em;
+}
