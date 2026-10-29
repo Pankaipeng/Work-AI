@@ -125,12 +125,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20 Knowledge 知识点/AI agent.md",
+                "file": "20 Knowledge 知识点/Skills.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AI agent"
+              "title": "Skills"
             }
           }
         ],
@@ -212,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "20 Knowledge 知识点/AI agent.md",
+                "file": "20 Knowledge 知识点/Skills.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -274,7 +274,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20 Knowledge 知识点/AI agent.md",
+                "file": "20 Knowledge 知识点/Skills.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -304,10 +304,10 @@
   },
   "active": "ea286f5d471ac629",
   "lastOpenFiles": [
+    "20 Knowledge 知识点/AI agent.md",
     "01 Maps 导航/选品Skills.md",
     "01 Maps 导航/亚马逊运营Skills.md",
     "30 Skills 技能库/搜索词Skills.md",
-    "20 Knowledge 知识点/AI agent.md",
     "Pasted image 20261029150001.png",
     "Pasted image 20261029101838.png",
     "未命名.md",
