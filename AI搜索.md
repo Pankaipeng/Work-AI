@@ -13,6 +13,8 @@ AI 搜索
 **理解问题、拆解研究方向、检索多个来源、总结证据，并给出有来源的结论。**
 
 ## 工具
-- chatgpt
+- chatgpt 强
 - [[Perplexity]] 最强; 优势：搜索资料、来源发现、引用透明度。
 - Google AI Mode 有点拉
+- gemini 拉
+- claude 没用过
