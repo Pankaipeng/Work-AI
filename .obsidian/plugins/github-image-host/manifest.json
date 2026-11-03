@@ -1,0 +1,10 @@
+{
+  "id": "github-image-host",
+  "name": "GitHub Image Host",
+  "version": "0.1.2",
+  "minAppVersion": "1.6.6",
+  "description": "Upload pasted or dropped images to a GitHub repository and insert the public link into your note.",
+  "author": "rockychang7",
+  "authorUrl": "https://github.com/rockychang7",
+  "isDesktopOnly": false
+}
