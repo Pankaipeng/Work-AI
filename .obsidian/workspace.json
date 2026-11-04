@@ -200,14 +200,7 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false,
-      "obsidian-full-calendar:Open Full Calendar": false,
-      "full-calendar-remastered:打开日历": false,
-      "full-calendar-remastered:FCR 命令": false,
-      "full-calendar-remastered:Open calendar agent": false,
-      "full-calendar-remastered:Task backlog": false,
-      "sidebar-highlights:Open highlights": false,
-      "sidebar-highlights:Open tasks": false
+      "bases:新建数据库": false
     }
   },
   "active": "39ad88ca845b01a0",
