@@ -38,6 +38,8 @@ AI Agent（人工智能智能体）是一个能够自主感知环境、设定目
 - Claude Cowork
 - 千问办公
 - [[Openclaw]](龙虾/开源)
+- 豆包工作
+- WPS AI
 
 ## AI agent与MCP关系
  ai agent(智能体)可以理解为有自主能力能操作工具的员工，[[MCP]]是连接外部工具的接口；
