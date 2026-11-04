@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "49db8d731844106b",
+        "id": "3ae84f23e1f611df",
         "type": "tabs",
         "children": [
           {
-            "id": "3a4fdcc1adc45108",
+            "id": "760d297702268d9c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -203,12 +203,13 @@
       "bases:新建数据库": false
     }
   },
-  "active": "3a4fdcc1adc45108",
+  "active": "760d297702268d9c",
   "lastOpenFiles": [
     "01 Maps 导航/亚马逊运营Skills.md",
+    "file:C:/Users/Administrator/AppData/Roaming/LarkShell/aha/users/9878519ea2faa74cc8f7aca386bd4838/doubao/.doubao/agent_mode/workspace/.user_skills/amazon-report-archive/SKILL.md",
+    "00 To Do 待办/Skills库搭建.md",
     "20 Knowledge 知识点/AI agent.md",
     "20 Knowledge 知识点/MCP.md",
-    "00 To Do 待办/Skills库搭建.md",
     "01 Maps 导航/亚马逊运营+AI工作流.md",
     "AI常用工具汇总.md",
     "AI",
@@ -234,7 +235,6 @@
     "20 Knowledge 知识点/Openclaw.md",
     "20 Knowledge 知识点/workbuddy.md",
     "20 Knowledge 知识点/AI智能体.md",
-    "目录.md",
     "90 Templates 模板",
     "30 Skills 技能库",
     "20 Knowledge 知识点",
