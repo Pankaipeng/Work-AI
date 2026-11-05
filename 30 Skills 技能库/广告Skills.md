@@ -5,4 +5,4 @@
 
 ## 广告词架构（跟搜索词Skills可能重复）
 - [amazon-skills/skills/zach-search-term-report-analyzer/SKILL.md at main · zach22-1999/amazon-skills](https://github.com/zach22-1999/amazon-skills/blob/main/skills/zach-search-term-report-analyzer/SKILL.md)（广告词AI词根分类）
-- 
+- [Derek95king/amz-ads-keyword-architect](https://github.com/Derek95king/amz-ads-keyword-architect?utm_source=chatgpt.com)
