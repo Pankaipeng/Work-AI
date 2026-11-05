@@ -3,3 +3,4 @@
 - [Amazon-Skills/amazon-keyword-research/SKILL.md at main · nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills/blob/main/amazon-keyword-research/SKILL.md)(前台关键词自动补全扩展)
 - [Amazon-Skills-Liang/skills/amazon-one-shot/SKILL.md at main · liangdabiao/Amazon-Skills-Liang](https://github.com/liangdabiao/Amazon-Skills-Liang/blob/main/skills/amazon-one-shot/SKILL.md)（一站式，从0到1，完整架构）
 - [sealeap-amazon-skills/amazon-skills/app/apollo/sealeap-apollo-keyword-library/SKILL.md at main · xjli360/sealeap-amazon-skills](https://github.com/xjli360/sealeap-amazon-skills/blob/main/amazon-skills/app/apollo/sealeap-apollo-keyword-library/SKILL.md)（词库搭建分级）
+- [amazon-sorftime-research-MCP-skill/SKILLS/skills/amazon-listing-builder/skill.md at main · liangdabiao/amazon-sorftime-research-MCP-skill](https://github.com/liangdabiao/amazon-sorftime-research-MCP-skill/blob/main/SKILLS/skills/amazon-listing-builder/skill.md)（从选品开始0-1先建词库后listing-方法论） #推荐
