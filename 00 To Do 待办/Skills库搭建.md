@@ -1,3 +1,10 @@
+---
+title: Skills库搭建
+type: 待办
+tags: [待办, skill规划]
+updated: 2026-11-06
+---
+
 ## Skills搜寻优先级
 
 1. 广告词架构；

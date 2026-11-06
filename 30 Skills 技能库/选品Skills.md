@@ -1,3 +1,10 @@
+---
+title: 选品Skills
+type: 技能库
+tags: [skill, 外部链接, 选品]
+updated: 2026-11-06
+---
+
 ## 大框架
 - [liangdabiao/amazon-sorftime-research-MCP-skill](https://github.com/liangdabiao/amazon-sorftime-research-MCP-skill)
 思维导图

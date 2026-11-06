@@ -1,3 +1,10 @@
+---
+title: Openclaw
+type: 知识点
+tags: [知识点, AI, 智能体]
+updated: 2026-11-06
+---
+
 OpenClaw（龙虾） 是一款由奧地利開發者 Peter Steinberger 打造的開源 AI 智能體（AI Agent）執行引擎。
 
 **开发者：** 奧地利工程師 Peter Steinberger

@@ -1,3 +1,10 @@
+---
+title: workbuddy
+type: 知识点
+tags: [知识点, AI, workbuddy]
+updated: 2026-11-06
+---
+
 ## 发展历程
 
 2023-2025 技术积累：

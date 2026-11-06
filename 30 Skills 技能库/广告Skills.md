@@ -1,3 +1,10 @@
+---
+title: 广告Skills
+type: 技能库
+tags: [skill, 外部链接, 广告]
+updated: 2026-11-06
+---
+
 ## ppc优化（数据分析）
 - [Amazon-Skills-Liang/skills/amazon-ppc-campaign/SKILL.md at main · liangdabiao/Amazon-Skills-Liang](https://github.com/liangdabiao/Amazon-Skills-Liang/blob/main/skills/amazon-ppc-campaign/SKILL.md)
 - [amazon-ads-optimization/SKILL.md at main · Wany-i/amazon-ads-optimization](https://github.com/Wany-i/amazon-ads-optimization/blob/main/SKILL.md)

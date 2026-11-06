@@ -1,3 +1,10 @@
+---
+title: 文案Skills
+type: 技能库
+tags: [skill, 外部链接, listing]
+updated: 2026-11-06
+---
+
 - [liangdabiao/amazon-listing-alexa-optimizer](https://github.com/liangdabiao/amazon-listing-alexa-optimizer)更容易被Alexa推荐, 最新，包含highlight #推荐
 - [Amazon-Skills-Liang/skills/amazon-listing-optimization/README_CN.md at main · liangdabiao/Amazon-Skills-Liang](https://github.com/liangdabiao/Amazon-Skills-Liang/blob/main/skills/amazon-listing-optimization/README_CN.md)A9算法优化，未包含highlight
 - [buluslan/amazon-listing-doctor](https://github.com/buluslan/amazon-listing-doctor)链接诊断CDQ算法（未验证）

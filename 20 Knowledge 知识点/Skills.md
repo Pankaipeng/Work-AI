@@ -1,3 +1,10 @@
+---
+title: Skills
+type: 知识点
+tags: [知识点, AI, skill]
+updated: 2026-11-06
+---
+
 **Skill** 指的是**AI 系统的模块化能力包**（或称**AI智能体技能**），它本质上是一份“写给 AI 看的操作手册（SOP）和工具合集”。
 
 ![](https://assert.wearesellers.com/questions/20260903/0a6ec278f96784d2b94a25c5c14f7ea3.png)

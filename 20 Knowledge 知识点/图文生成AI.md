@@ -1,3 +1,10 @@
+---
+title: 图文生成AI
+type: 知识点
+tags: [知识点, AI, 图片]
+updated: 2026-11-06
+---
+
 官方：
 - Amazon Creative Studio
 - Generative AI for Product Listings / A+ AI Content Creator
