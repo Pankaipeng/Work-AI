@@ -1,7 +1,10 @@
 ## Skills搜寻优先级
 
 1. 广告词架构；
-2. [ ] 搜索词拓展；
+2. [x] 搜索词拓展；/广告词扩展 ✅ 2026-11-06
+	1. 两个方向，一个是建词库写listing; 一个是广告词优化和打法搭建；
+	2. 建词库写listing：用deepseek跑数据，然后喂给chatgpt写文案；[amazon-listing-skill/SKILL.md at main · sanshiliu-studio/amazon-listing-skill](https://github.com/sanshiliu-studio/amazon-listing-skill/blob/main/SKILL.md) 3个skill混用，有一个市场调查的打底，需要重建
+	3. 广告词优化和打法搭建：[marketplace/skills/zach22-1999/zach-search-term-report-analyzer/SKILL.md at main · aiskillstore/marketplace](https://github.com/aiskillstore/marketplace/blob/main/skills/zach22-1999/zach-search-term-report-analyzer/SKILL.md)
 3. 链接诊断(流量转化广告文案，全面性的综合能力，问题链接销量或利润不行，快速寻找切入口）；
 4. [[30 Skills 技能库/选品Skills|选品Skills]];
 5. [x] 文案优化； ✅ 2026-11-03[[文案Skills]]
