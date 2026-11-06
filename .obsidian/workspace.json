@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3ae84f23e1f611df",
+        "id": "d9691dd5317109b3",
         "type": "tabs",
         "children": [
           {
-            "id": "f4e848255ed06114",
+            "id": "9e8330b50f582a6f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "30 Skills 技能库/广告Skills.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "广告Skills"
+              "title": "新标签页"
             }
           }
         ]
@@ -203,16 +199,17 @@
       "bases:新建数据库": false
     }
   },
-  "active": "f4e848255ed06114",
+  "active": "9e8330b50f582a6f",
   "lastOpenFiles": [
+    "file:D:/Downloads/Nieifi_Amazon_US_Listing_Migration.md",
+    "30 Skills 技能库/文案Skills.md",
+    "30 Skills 技能库/广告Skills.md",
     "AI模型常用.md",
     "01 Maps 导航/AI常用工具汇总.md",
-    "30 Skills 技能库/文案Skills.md",
     "00 To Do 待办/Skills库搭建.md",
     "01 Maps 导航/亚马逊运营Skills.md",
     "30 Skills 技能库/搜索词Skills.md",
     "30 Skills 技能库/图片Skills.md",
-    "30 Skills 技能库/广告Skills.md",
     "20 Knowledge 知识点/AI搜索.md",
     "20 Knowledge 知识点/Perplexity.md",
     "file:C:/Users/Administrator/AppData/Roaming/LarkShell/aha/users/9878519ea2faa74cc8f7aca386bd4838/doubao/.doubao/agent_mode/workspace/.user_skills/amazon-report-archive/SKILL.md",
@@ -234,7 +231,6 @@
     "20 Knowledge 知识点/亚马逊MCP.md",
     "90 Templates 模板/Skill示例文件.md",
     "20 Knowledge 知识点/Openclaw.md",
-    "20 Knowledge 知识点/workbuddy.md",
     "90 Templates 模板",
     "30 Skills 技能库",
     "20 Knowledge 知识点",
