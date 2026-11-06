@@ -3,5 +3,6 @@
   "auto-paste-link",
   "github-image-host",
   "obsidian-tasks-plugin",
-  "disable-tabs"
+  "disable-tabs",
+  "obsidian-local-rest-api"
 ]
