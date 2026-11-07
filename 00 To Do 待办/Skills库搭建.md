@@ -30,7 +30,7 @@ updated: 2026-11-06
 - [x] 月度财务   数据自动下载上传飞书 紫鸟ai，需要开权限 📅 2026-11-04 ✅ 2026-11-05
       workbuddy调用飞书需要审核授权
 	- 尝试豆包工作助手，原生，第一步后台下载报表需手动。豆包测试结束，需要付费订阅；迁移到workbuddy
-- [ ] AI购物助手 #生活 试试豆包
+- [ ] AI购物助手 #生活 试试豆包 ai买菜
 - [x] AI生成关键词链接文案一体化📅 2026-11-05 [GitHub - liangdabiao/amazon-sorftime-research-MCP-skill: 亚马逊选品 之 Listing全维度穿透分析报告 加上 全品类分析 ，关键词分析，差评分析 ，市场调研 等等。codex/claude code agent skill, amazon sorftime MCP/西柚mcp/sif mcp/卖家精灵sellersprite 智能体skill. 亚马逊跨境电商skill工具集。](https://github.com/liangdabiao/amazon-sorftime-research-MCP-skill/tree/main) ✅ 2026-11-05
 - [ ] 运营库存预警（不用每天）
 - [ ] 运营广告预警，业务数据异常预警（订单，转化，流量，评分，排名等）
