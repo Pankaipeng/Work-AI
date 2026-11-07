@@ -98,7 +98,7 @@ tags: [skill, moc, workbuddy, 我的skill]
 
 对话里 `@skill名` 直接调用，例如 `@listing-orchestrator`。
 
-## 待办
+## 未收录说明（仅备注，非待办）
 
-- [ ] `ziniao-*` 系列 15 个（紫鸟 / OpenAPI 导入，同一秒创建，非自建）暂未归档
-- [ ] `amazon-ads-empty-plate-composite` 上游未留链接，待确认是否同属 KuudoAI/skills
+- `ziniao-*` 系列 15 个（紫鸟 / OpenAPI 导入，同一秒创建，非自建）暂未归档
+- `amazon-ads-empty-plate-composite` 上游未留链接，来源待确认
