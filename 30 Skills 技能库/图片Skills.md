@@ -13,5 +13,6 @@ updated: 2026-11-06
 - [ [KuudoAI/skills\](https://github.com/KuudoAI/skills) ](https://github.com/KuudoAI/skills/blob/main/skills/amazon-ads-creative-assets/SKILL.md) #广告创意图
 
 ## 图片brief
-- [nexscope-ai/amazon-listing-images](https://github.com/nexscope-ai/Amazon-Skills/blob/main/amazon-listing-images/SKILL.md)
+- [nexscope-ai/amazon-listing-images](https://github.com/nexscope-ai/Amazon-Skills/blob/main/amazon-listing-images/SKILL.md) #图片策略 #主图
+- [a+plus content](https://github.com/nexscope-ai/Amazon-Skills/blob/main/amazon-a-plus-content/SKILL.md) #Aplus
 - 

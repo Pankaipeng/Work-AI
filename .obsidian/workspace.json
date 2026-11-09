@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30 Skills 技能库/图片Skills.md",
+                "file": "30 Skills 技能库/文案Skills.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "图片Skills"
+              "title": "文案Skills"
             }
           }
         ]
@@ -205,8 +205,8 @@
   },
   "active": "f85b3f778b5b8ae8",
   "lastOpenFiles": [
-    "30 Skills 技能库/选品Skills.md",
     "30 Skills 技能库/图片Skills.md",
+    "30 Skills 技能库/选品Skills.md",
     "30 Skills 技能库/文案Skills.md",
     "00 To Do 待办/待办清单.md",
     "00 To Do 待办/Skills库搭建.md",
