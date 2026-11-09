@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20 Knowledge 知识点/AI agent.md",
+                "file": "30 Skills 技能库/选品Skills.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AI agent"
+              "title": "选品Skills"
             }
           }
         ]
@@ -205,14 +205,16 @@
   },
   "active": "f85b3f778b5b8ae8",
   "lastOpenFiles": [
-    "AI Agent常用.md",
-    "20 Knowledge 知识点/AI agent.md",
-    "01 Maps 导航/AI常用工具汇总.md",
-    "01 Maps 导航/AI模型常用.md",
-    "01 Maps 导航/亚马逊运营+AI工作流.md",
+    "30 Skills 技能库/图片Skills.md",
+    "30 Skills 技能库/文案Skills.md",
     "00 To Do 待办/待办清单.md",
     "00 To Do 待办/Skills库搭建.md",
     "00 To Do 待办/库体检-2026-11-06.md",
+    "20 Knowledge 知识点/AI agent.md",
+    "AI Agent常用.md",
+    "01 Maps 导航/AI常用工具汇总.md",
+    "01 Maps 导航/AI模型常用.md",
+    "01 Maps 导航/亚马逊运营+AI工作流.md",
     "30 Skills 技能库/本地Skills/00 本地Skills总览.md",
     "01 Maps 导航/亚马逊运营Skills.md",
     "30 Skills 技能库/本地Skills/amazon-report-archive.md",
@@ -227,10 +229,8 @@
     "30 Skills 技能库/本地Skills/listing-orchestrator.md",
     "30 Skills 技能库/本地Skills/amazon-keyword-strategy.md",
     "30 Skills 技能库/本地Skills",
-    "30 Skills 技能库/文案Skills.md",
     "30 Skills 技能库/广告Skills.md",
     "30 Skills 技能库/搜索词Skills.md",
-    "30 Skills 技能库/图片Skills.md",
     "file:D:/Downloads/Nieifi_Amazon_US_Listing_Migration.md",
     "AI",
     "新建 文本文档.txt",

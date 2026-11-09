@@ -4,6 +4,12 @@ type: 技能库
 tags: [skill, 外部链接, 选品]
 updated: 2026-11-06
 ---
+## review分析
+- [CoderAndyLee/amz-review-analysis-skill](https://github.com/CoderAndyLee/amz-review-analysis-skill)
+
+
+## 属性标注
+- 
 
 ## 大框架
 - [liangdabiao/amazon-sorftime-research-MCP-skill](https://github.com/liangdabiao/amazon-sorftime-research-MCP-skill)
