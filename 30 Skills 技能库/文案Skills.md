@@ -14,3 +14,5 @@ updated: 2026-11-06
 - [MTL-skill/SKILL.md at main · xenosfeng-creator/MTL-skill](https://github.com/xenosfeng-creator/MTL-skill/blob/main/SKILL.md)
 - [amazon-listing-skill/SKILL.md at main · sanshiliu-studio/amazon-listing-skill](https://github.com/sanshiliu-studio/amazon-listing-skill/blob/main/SKILL.md)(适配较为完整，且小白教程) #推荐
 - [amazon-listing-optimization/SKILL.md at main · dandanbao123/amazon-listing-optimization](https://github.com/dandanbao123/amazon-listing-optimization/blob/main/SKILL.md)（结合广告和站内插件mcp优化listing) #推荐 
+
+需要查找有参照竞品ASIN的skills, 或手动喂竞品ASIN

@@ -15,4 +15,5 @@ updated: 2026-11-06
 ## 图片brief
 - [nexscope-ai/amazon-listing-images](https://github.com/nexscope-ai/Amazon-Skills/blob/main/amazon-listing-images/SKILL.md) #图片策略 #主图
 - [a+plus content](https://github.com/nexscope-ai/Amazon-Skills/blob/main/amazon-a-plus-content/SKILL.md) #Aplus
-- 
+
+需要查找有参照竞品ASIN的skills, 或手动喂竞品ASIN
