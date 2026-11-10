@@ -8,17 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f85b3f778b5b8ae8",
+            "id": "6814ede754bebfc8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "00 To Do 待办/待办清单.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Drawing 2026-11-10 12.00.20.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "待办清单"
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-11-10 12.00.20.excalidraw"
             }
           }
         ]
@@ -200,17 +198,21 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false
+      "bases:新建数据库": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "f85b3f778b5b8ae8",
+  "active": "6814ede754bebfc8",
   "lastOpenFiles": [
+    "卖点提炼卖点排序Skills.md",
+    "Excalidraw/Drawing 2026-11-10 12.00.20.excalidraw.md",
+    "Excalidraw",
     "00 To Do 待办/Skills库搭建.md",
+    "00 To Do 待办/待办清单.md",
     "30 Skills 技能库/图片Skills.md",
     "30 Skills 技能库/搜索词Skills.md",
     "30 Skills 技能库/文案Skills.md",
     "30 Skills 技能库/广告Skills.md",
-    "00 To Do 待办/待办清单.md",
     "20 Knowledge 知识点/领星MCP.md",
     "10 Inbox 资料库/(313) 亚马逊Listing图片全链路拆解：从主图到A+，每一张图到底需要展现什么 - 知无不言跨境电商社区.md",
     "10 Inbox 资料库",
@@ -230,8 +232,6 @@
     "30 Skills 技能库/本地Skills/amazon-ads-creative-assets.md",
     "30 Skills 技能库/本地Skills/amazon-xlsm-listing-builder.md",
     "30 Skills 技能库/本地Skills/amazon-listing-skill.md",
-    "30 Skills 技能库/本地Skills/amazon-listing-alexa-optimizer.md",
-    "30 Skills 技能库/本地Skills/amazon-listing-builder.md",
     "30 Skills 技能库/本地Skills",
     "AI",
     "新建 文本文档.txt",
@@ -241,7 +241,6 @@
     "30 Skills 技能库",
     "20 Knowledge 知识点",
     "01 Maps 导航",
-    "00 To Do 待办",
-    "未命名.base"
+    "00 To Do 待办"
   ]
 }
