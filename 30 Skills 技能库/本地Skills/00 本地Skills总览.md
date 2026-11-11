@@ -84,6 +84,7 @@ tags: [skill, moc, workbuddy, 我的skill]
 | [[amazon-report-archive\|amazon-report-archive]] | 技能包下载（.zip，约 43KB） | https://bqnscp788os.feishu.cn/file/LsclbdKDPoZouXxQhyscQkmkn9b |
 | [[amazon-report-archive\|amazon-report-archive]] | 飞书云盘根目录「财务数据」 | https://bqnscp788os.feishu.cn/drive/folder/AItLfwU1clx70TdEqoDcaHAKnTo |
 | [[amazon-keyword-strategy\|amazon-keyword-strategy]] | 作者社区介绍（新西楼.AI，非本组织） | https://my.feishu.cn/wiki/WNi0wh3mIiOLhzkCLFPcwUr9nrg |
+| [[lingxing-fba-shipping-plan\|lingxing-fba-shipping-plan]] | 在线使用说明（永远最新，由 sync_feishu.py 同步） | https://bqnscp788os.feishu.cn/docx/LdkbdfqYkoLES1xoRpHcjyQ8nuh |
 
 > `bqnscp788os.feishu.cn` 是你本组织的 tenant（自建 skill 的对外文档）；`my.feishu.cn` 那条是第三方作者的社区，非本组织。
 

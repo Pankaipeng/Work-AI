@@ -5,17 +5,17 @@ group: 供应链 / 发货
 source_level: 自建
 upstream: —（无上游，本地原创）
 local_path: C:/Users/Administrator/.workbuddy/skills/lingxing-fba-shipping-plan/
-updated: 2026-11-06
+updated: 2026-11-11
 tags: [skill, workbuddy, 自建, 领星, 我的skill]
 ---
 
 # lingxing-fba-shipping-plan
 
 > [!tip] 🟢 自建（我个人创建）
-> 装箱单 + 货件列表 + 一家货代报价，自动产出出货明细（含最优渠道/单价/时效）、恒信报关发票（40 列）、仓库贴标备注对接表，并能把箱唛按票发到工厂对接群。
+> 把领星装箱单、领星货件（FBA号/PO/仓库，走 MCP 直接取）与**一家**货代的周报价表，自动生成 FBA 发货计划——出货明细（含该货代最优渠道/单价/时效）、恒信报关发票（40 列）、仓库贴标备注对接表。
 
-> **判断依据**：SKILL.md 标记 `agent_created: true`；config.json 内是本机货代/仓库字典；含 2026-11-06 的 _backup 旧版迭代痕迹。
->
+> **本笔记由 `scripts/sync_vault.py` 从 SKILL.md 生成**，不要手改正文；
+> 技能变更后重跑脚本即可。生成时间 2026-11-11。
 
 ## 速览
 
@@ -25,33 +25,35 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 | 上游 | —（无上游，本地原创） |
 | 分组 | 供应链 / 发货 |
 | 调用 | `@lingxing-fba-shipping-plan` |
-| 内部标题 | 领星 FBA 发货计划生成（单货代） |
 | 本地路径 | `C:/Users/Administrator/.workbuddy/skills/lingxing-fba-shipping-plan/` |
-| SKILL.md | 334 行 |
-| 最后更新 | 2026-11-06 |
+| SKILL.md | 434 行 |
+| 最后更新 | 2026-11-11 |
 
 ## 触发场景
 
-领星发货计划、装箱单转发票、报关发票、贴标备注、仓库对接表、指定货代出计划
+把领星装箱单、领星货件（FBA号/PO/仓库，走 MCP 直接取）与**一家**货代的周报价表，自动生成 FBA 发货计划——出货明细（含该货代最优渠道/单价/时效）、恒信报关发票（40 列）、仓库贴标备注对接表。
+
+## 对外链接
+
+| 用途 | 说明 | 链接 |
+|---|---|---|
+| 使用说明 | 在线版，永远最新；由 scripts/sync_feishu.py 从 使用说明.md 覆盖更新 | https://bqnscp788os.feishu.cn/docx/LdkbdfqYkoLES1xoRpHcjyQ8nuh |
+
 
 ## 内容结构
 
 - **用途**
+- **浏览器交互：一律由用户执行（硬规则）**
 - **开始前先收集输入**
+- **货件数据怎么取（替代亚马逊后台导出）**
+- **本地参照库（报关要素 / 箱规 / 服务代码）**
 - **执行流程**
-  - 1. 确认配置
-  - 查领星发货计划（拿发货仓作兜底、反查货件号）
-  - 2. 跑生成脚本
-  - 3. 处理校验报告
-  - 4. 抽检输出
-  - 5. 发群通知（可选，箱唛 + 贴标备注 + 两份附件）
-  - 5.5 发错了怎么处置（撤不回，只能作废）
-  - 6. 汇报
 - **关键口径（易错，务必遵守）**
 - **脚本约定**
 
 ## 附带文件
 
+- `SKILL.md`
 - `config.json`
 - `使用说明.md`
 - `安装说明.md`
@@ -62,6 +64,7 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 - `references/quote-rules.md`
 - `scripts/attachments.py`
 - `scripts/build_plan.py`
+- `scripts/build_refdata.py`
 - `scripts/gate.py`
 - `scripts/make_bundle.py`
 - `scripts/notice.py`
@@ -72,6 +75,14 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 - `scripts/send_robot.py`
 - `scripts/send_void.py`
 - `scripts/sendlog.py`
+- `scripts/sync_feishu.py`
+- `scripts/sync_vault.py`
+- `assets/config.example.json`
+- `assets/links.json`
+- `assets/service_codes.csv`
+- `assets/产品箱规.csv`
+- `assets/发货模板_恒信_10.22.xlsx`
+- `assets/报关要素.csv`
 
 ## 全文（SKILL.md 原文）
 
@@ -86,29 +97,106 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 | 输入 | 输出 |
 |---|---|
 | ① 装箱单（领星/易仓导出，可多份） | ① **发票**：恒信报关资料，40 列，一票×SKU 一行 |
-| ② 亚马逊后台货件列表（含目的地/PO） | ② **仓库对接表**：箱子编号+货件信息+货件标题（贴标备注） |
+| ② **货件数据（领星 MCP `get_fba_shipment_list` 的 JSON，推荐）** | ② **仓库对接表**：箱子编号+货件信息+货件标题（贴标备注） |
 | ③ **本周该货代的报价表（1 份）** | ③ **出货明细**：含该货代内选中的渠道/单价/时效 |
 | ④ 字典表（地址库/型号库/服务类型，默认复用） | ④ **校验报告**：需人工确认的缺口 |
-| | ⑤ **群通知**（可选）：一票一条文字 + FBA箱唛/货代唛头两份 PDF，发企业微信工厂发货对接群 |
+| ⑤ 本地参照库（报关要素/产品箱规/服务代码，`assets/*.csv`） | ⑤ **群通知**（可选）：一票一条文字 + FBA箱唛/货代唛头两份 PDF |
+
+**货件数据不再依赖亚马逊后台导出**：领星 `get_fba_shipment_list` 一条记录同时给 FBA 货件号、
+Reference ID（发票 PO Number）、目的仓库代码、亚马逊配送地址、送达时段与申报数量，走 MCP 取一次即可。
+亚马逊「货件」页导出的 xlsx 仍然兼容（`--shipments` 认 .json/.xlsx/.csv），但没有 JSON 时优先用它。
 
 **本技能只出一家货代的计划，整批不混用货代。** 需要先比较两家再定货代，请先用 `lingxing-fba-carrier-compare` 技能出结论，拿到选定货代后再回来跑本技能。
+
+## 浏览器交互：一律由用户执行（硬规则）
+
+**不要接管浏览器。** 不点鼠标、不按键、不填表单、不开新标签页、不猜下载结果。
+领星建 STA、改箱规、导出箱唛、恒信上传建单、亚马逊填追踪号这类后台操作，**全部由用户在浏览器完成**，
+本技能只负责「出操作单 → 收用户回传 → 继续算数出表」。理由：这些后台是懒加载 + 非语义化控件，
+坐标级自动化不稳（点不中、误触发提交、判定不出是否下载成功），纠正成本远高于人手一遍；且一旦混手，出问题无法归因。
+
+能走 MCP / 导出文件的绝不走浏览器（如发货仓与 FBA 号一律从 `fba_plan_group_list` 取）。
+
+交接时**必须**按这个模板给出，用户照着点即可：
+
+```text
+【这一步要你在浏览器做】
+1. 打开 <页面/入口>
+2. 操作：<3~6 步，每步一句，写清控件名与选项>
+3. 关键参数：<箱规 / 送达时段 / 承运人 / 标签尺寸…，可直接抄>
+4. 做完把这些发我：<要回传的字段清单，如 5 个 FBA 号 + 5 个 Reference ID>
+5. 文件下载到哪：<明确目录，或"下载后把路径发我">
+```
+
+用户回**三件套**即可继续：① 号码（FBA 号 / Reference ID / PT 运单号 / 报价合计）；
+② 下载文件所在目录；③ 报错文字或截图。
+
+同一 UI 动作用户已重试 2 次、或本阶段超过 10 分钟没有新产出时，**立刻 handoff**，不要硬撑。
 
 ## 开始前先收集输入
 
 逐项确认：
 
 1. **装箱单**（必需）——必须有 SKU、箱数、单箱数量、箱号、FBA 编码。
-2. **货件列表**（必需）——亚马逊后台「货件」页导出，给出仓库代码；有 PO 跟踪码更好。
+2. **货件数据**（必需，但**不用去亚马逊后台导**）——领星 MCP `get_fba_shipment_list` 的原始 JSON 存盘即可，
+   一次给齐 FBA 号 / Reference ID / 仓库代码 / 配送地址 / 送达时段。见下节「货件数据怎么取」。
 3. **货代报价表（必需，只要 1 份）**——本周最新那版，文件名含「恒信/辛巴」或「凯琦」等，脚本按文件名识别货代名。**不要传两家**，传了会直接报错并提示改用比价技能。
 4. **字典表**（默认复用）——地址库、发票型号汇总、服务类型，取自 `assets/发货模板_恒信_10.22.xlsx`。
-5. **Amazon Reference ID（发票 PO Number 列，必填）**——亚马逊「货件」页每张卡片上的 `Amazon Reference ID`（8 位，如 3R7L826W），
-   用 `--ref-id FBA19W62BHMD=3R7L826W ...` 传入；用户一次发多张截图时逐票抄全，别只抄第一张。
+5. ~~Amazon Reference ID~~ **不用再手抄**：货件 JSON 的 `reference_id` 就是 PO Number，脚本自动带进发票；
+   只在没取到 JSON（用发货计划 `mws_relate` 兜底）时才需要 `--ref-id FBA=参考号` 补。
 6. **提货地点 / 所在货站**——**提货地点是按 SKU 定的，取领星发货计划的「发货仓库」**（计划行 `wname`）：
    工厂直发的 SKU 是「工厂直发-厨之乐 / 工厂直发-武航」，备货仓的 SKU 是「中山青吉仓库」。
    同一票里两种经常混装，所以出货明细逐行写各自的发货仓库、仓库对接表一行一个、群通知每行标 `（XX贴）`。
    型号库「工厂」列只是老数据兜底，`config.carrier.提货地点` 是最后兜底。
 
 用户只说"按模板来"、附件未上传时：先用 `assets/发货模板_恒信_10.22.xlsx` 跑通并展示结果形态，同时列出待补文件清单，不要凭空编造装箱数据。
+
+## 货件数据怎么取（替代亚马逊后台导出）
+
+走领星 MCP，两个调用就够，**取回来的 JSON 原样存盘**（如 `input/领星货件_<日期>.json`）再交给脚本：
+
+```text
+help(query="货件")                     # 找 get_fba_shipment_list
+action get_fba_shipment_list           # search_field_time="create_date"
+                                       # is_sta="1"（只要 STA 货件）
+                                       # is_closed="0"、shipment_status[]="WORKING"
+                                       # start_date/end_date = 建 STA 那天
+                                       # seniorSearchList[] 可按 shipment_id 精确捞单票
+                                       # 其余必填字段传空串，sort_field="gmt_create"
+```
+
+返回 `data.data.list[]` 每条的字段与用途：
+
+| 字段 | 用途 |
+|---|---|
+| `shipment_id` | FBA 货件号（装箱单里的 FBA 编码，按它对票） |
+| `reference_id` | **发票 PO Number 货件跟踪编码**（如 5B3AT7GN） |
+| `destination_fulfillment_center_id` | 目的仓库代码（发票「地址库编码」/选渠道用） |
+| `orig_ship_to_address` | 亚马逊配送地址（地址库缺该仓时兜底，邮编非数字会判为无效） |
+| `sta_delivery_start_date` / `_end_date` | 送达时段（核 STA 填得对不对） |
+| `total_quantity_shipped` | 后台申报量，用来和装箱单件数对账 |
+| `item_list[].sku / quantity_shipped` | 该货件的 SKU 与分货数量 |
+
+**一手数据只认货件 JSON**：`--shipments` 给 JSON 时，FBA 号、PO、仓库、地址、申报量全部来自它；
+没给时脚本退到发货计划的 `mws_relate`（有 FBA 号+仓库，**没有 PO**，校验报告会提示用 `--ref-id` 补）。
+
+## 本地参照库（报关要素 / 箱规 / 服务代码）
+
+三份 CSV 都**从原始导出生成，不手改**；原始表更新后重跑一次即可：
+
+```bash
+python scripts/build_refdata.py \
+  --products "D:/Pictures/领星产品材质、报关编码确认版.xlsx" \
+  --service-template "D:/WXWork/<id>/Cache/File/<月>/辛巴发票模版2026-10-15.xlsx"
+```
+
+| 文件 | 内容 | 谁在用 |
+|---|---|---|
+| `assets/报关要素.csv` | SKU → 中英文报关名 / 材质 / 用途 / HSCODE / 报关型号 | 覆盖型号库的申报字段，**英文报关名为空直接报错，不编造** |
+| `assets/产品箱规.csv` | SKU → 外箱长宽高 / 单箱数量 / 单箱重量（领星主数据） | 箱规预检，箱数与主数据不符提前报 |
+| `assets/service_codes.csv` | 货代服务代码白名单（122 条，含包税方式/类型/分类） | 发票「服务*」逐行校验，`US-TRKP` 这类错码本地就拦，并给最接近的候选 |
+
+脚本默认读这三份（`--customs-lib` / `--box-spec` / `--service-codes` 可换路径）。
 
 ## 执行流程
 
@@ -160,15 +248,16 @@ export PYTHONUTF8=1
 
 python scripts/build_plan.py \
   --packing "装箱单1.xlsx" "装箱单2.xlsx" \
-  --shipments "货件列表.xlsx" \
+  --shipments "领星货件_2026-11-11.json" \
   --quote "恒信（辛巴）海运报价-2026-11-02.xlsx" \
   --template "发货模板.xlsx" \
-  --ref-id FBA19W62BHMD=3R7L826W FBA19W64C0G9=31R6DDWX \
   --warehouse-map "领星计划_RP261023007.json" --plan-seq RP261023007 \
   --station "中山集散中心" --arrival 2026-11-05 \
   --out "./输出"
 ```
 
+`--shipments` 认三种：**领星货件 JSON（推荐）**、亚马逊后台 xlsx、同结构 csv；
+**可以不给**——不给就从 `--warehouse-map` 的 `mws_relate` 兜底（但拿不到 PO）。
 `--quote` 只传一家；货代名按 `config.carrier_aliases` 从文件名识别。
 `--template` 同时提供地址库/型号库/服务类型，也可用 `--address/--models/--services` 单独指定。
 表头认不出时用 `--packing-sheet/--shipment-sheet` 指定工作表名。
@@ -177,12 +266,16 @@ python scripts/build_plan.py \
 
 | 参数 | 含义 | 取值 |
 |---|---|---|
-| `--ref-id` | PO Number 货件跟踪编码 | `FBA=参考号`，可多组；也可给 csv/json 映射文件 |
+| `--shipments` | 货件来源（FBA 号/PO/仓库/地址） | 领星 `get_fba_shipment_list` JSON 最全；xlsx/csv 亦可 |
+| `--ref-id` | PO Number **兜底** | 平常不用给（JSON 里有 `reference_id`）；只有走 `mws_relate` 兜底时才需要 `FBA=参考号` |
 | `--warehouse-map` | 按 SKU 定提货地点 | 领星 `fba_plan_group_list` 原始 JSON；也支持 `SKU=发货仓库` 文本或 CSV |
 | `--plan-seq` | 只认本批计划 | 批次号 `RP261023007` 或计划单号 |
 | `--pickup` | 提货地点**兜底值** | 领星没匹配到、型号库也没填工厂时才用 |
 | `--station` | 所在货站 | 默认 中山集散中心 |
 | `--arrival` | 预计到仓时间 | 默认当天 |
+| `--customs-lib` | 报关要素库 | 默认 `assets/报关要素.csv` |
+| `--service-codes` | 服务代码白名单 | 默认 `assets/service_codes.csv` |
+| `--box-spec` | 领星主数据箱规 | 默认 `assets/产品箱规.csv` |
 
 产出：`输出/发货计划_2026-11-04.xlsx`（出货明细 / 发票 / 仓库对接表 / 校验报告）+ 同名 `.json`（含每票中选渠道、备选渠道与合计运费）。
 文件名按**当天日期**生成，同日重复执行自动加 `_2`、`_3`，不会覆盖上一份。
@@ -191,9 +284,12 @@ python scripts/build_plan.py \
 
 先看同名 `.json` 的 `issues`：
 
-- **错误** 必须解决后重跑：地址库缺仓库、货件表缺 FBA 号、该货代查不到此仓含税价。
-- **警告** 逐条确认：数量与后台不符、箱号与箱数不符、型号库缺 SKU。
-- **提示** 带进汇报：渠道无标准服务代码、同货代次优渠道差 <2%。
+- **错误** 必须解决后重跑：地址库缺仓库（且领星货件里也拿不到地址）、货件来源里没有该 FBA 号、
+  该货代查不到此仓含税价、**服务代码不在白名单**（会报「服务不存在」，脚本已给最接近的候选）、
+  **报关要素缺英文报关名/HSCODE**（不编造，去 `assets/报关要素.csv` 补）。
+- **警告** 逐条确认：数量与后台不符、箱号与箱数不符、型号库缺 SKU、**装箱单单箱数量与领星主数据箱规不一致**、
+  缺 Reference ID（走 `mws_relate` 兜底且没给 `--ref-id`）、地址来自领星货件需核对收件人。
+- **提示** 带进汇报：渠道无标准服务代码、同货代次优渠道差 <2%、箱体尺寸与主数据差 >1.5cm。
 
 不允许把带"错误"的结果交给用户当成品。
 
@@ -386,6 +482,12 @@ python scripts/send_robot.py --manifest "..." --webhook "https://..." --send --c
 - **发票出 55 列完整版**（与货代系统示例 `FBA订单明细` 逐列对齐），必填列（带 `*`）一个都不能空：
   `PO Number 货件跟踪编码` = **Amazon Reference ID**（不是 PT 单号）、`预计到仓时间*`、`所在货站*`。
   40 列精简版货代系统不收，`invoice.extend_to_fba_order_detail` 保持 `true`。
+- **一手货件数据只认领星 `get_fba_shipment_list`**：FBA 号、PO（`reference_id`）、仓库代码、地址、申报量
+  全从它取，不再靠亚马逊后台导出或手抄截图；亚马逊导出只在没 JSON 时兼容。
+- **发票「服务*」必须在服务代码白名单里**：`assets/service_codes.csv` 来自货代发票模板的「服务类型列表」，
+  渠道代码对不上就本地报错（历史踩坑：`US-TRKP` 上传第 28 行才报「服务不存在」，正确是 `US-TRK`）。
+- **报关要素以 `assets/报关要素.csv` 为准**（源：`领星产品材质、报关编码确认版.xlsx`）；
+  英文报关名/HSCODE 为空时报错让人补，**不许编造**。
 - **提货地点 = 领星发货计划里该 SKU 的「发货仓库」（计划行 `wname`），逐 SKU 取**：`工厂直发-XX` 去工厂提、`中山青吉仓库` 去仓库提，同一票常混装。型号库「工厂」列只是老数据兜底。群通知每行要标 `（XX贴）`。
 - **发票一票×一 SKU 一行**；`总箱数` 填该票合计，`产品申报数量` 填**单箱数量**。
 - **货箱编号折叠**：`FBA19V04K1GYU000001-6`（结束号不补零，单箱不折叠）。
@@ -407,9 +509,14 @@ python scripts/send_robot.py --manifest "..." --webhook "https://..." --send --c
 ## 脚本约定
 
 - 只依赖 `openpyxl`，无 pandas/PyYAML；CSV 报价表 UTF-8/GBK 自适应。
+- `scripts/build_refdata.py`：从领星导出表重建三份本地参照库（报关要素 / 产品箱规 / 服务代码），
+  原始表更新后重跑，**不要手改 CSV**。
+- `scripts/sync_vault.py`：把 SKILL.md 同步成 Obsidian 库里的技能笔记（`30 Skills 技能库/本地Skills/`），
+  技能改完跑一次，笔记别手改正文。
 - 报价解析在 `scripts/quote_parser.py`：按「渠道类型行（含税/不含税）+ 起收档位行 + 仓库代码列」定位区块，恒信竖排/凯琦横排都能吃；结构不匹配时退回通用表头解析。
 - 选渠道在 `Builder.select_channel`：只做同货代内比价，**不要**在这里加跨货代逻辑，那是 `lingxing-fba-carrier-compare` 的职责。
 - 修改口径优先改 `config.json`；改代码前先读 `quote_parser.parse_sheet` 与 `quoting.calc_charge`。
+
 
 ---
 
