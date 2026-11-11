@@ -26,7 +26,7 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 | 分组 | 供应链 / 发货 |
 | 调用 | `@lingxing-fba-shipping-plan` |
 | 本地路径 | `C:/Users/Administrator/.workbuddy/skills/lingxing-fba-shipping-plan/` |
-| SKILL.md | 467 行 |
+| SKILL.md | 479 行 |
 | 最后更新 | 2026-11-11 |
 
 ## 触发场景
@@ -38,10 +38,12 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 | 用途 | 说明 | 链接 |
 |---|---|---|
 | 使用说明 | 在线版，永远最新；由 scripts/sync_feishu.py 从 使用说明.md 覆盖更新 | https://bqnscp788os.feishu.cn/docx/LdkbdfqYkoLES1xoRpHcjyQ8nuh |
+| 技能包 | 约 300KB，含发货计划 + 比价两个技能；由 scripts/make_skill_package.py 打包，改动后重新打包并覆盖上传同一个 file_token | https://bqnscp788os.feishu.cn/file/TjEMbEqYvoyu7uxmv2pcqVoOn5c |
 
 
 ## 内容结构
 
+- **安装与分发**
 - **用途**
 - **浏览器交互：一律由用户执行（硬规则）**
 - **开始前先收集输入**
@@ -68,6 +70,7 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 - `scripts/gate.py`
 - `scripts/labels_to_packing.py`
 - `scripts/make_bundle.py`
+- `scripts/make_skill_package.py`
 - `scripts/notice.py`
 - `scripts/quote_parser.py`
 - `scripts/quoting.py`
@@ -91,9 +94,19 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 
 # 领星 FBA 发货计划生成（单货代）
 
+## 安装与分发
+
+- 技能包（含本技能 + `lingxing-fba-carrier-compare` 比价技能）：
+  https://bqnscp788os.feishu.cn/file/TjEMbEqYvoyu7uxmv2pcqVoOn5c （约 300KB）
+- 同事装法：解压后把两个文件夹放到 `<用户名>/.workbuddy/skills/`（只一层同名目录），
+  `pip install openpyxl pypdf`，重启 WorkBuddy。详见本目录 `安装说明.md`。
+- 改完技能要重新发版：`python scripts/make_skill_package.py --out <zip>` 打包，
+  再用同一个 `file_token` 覆盖上传（地址记在 `assets/links.json`），链接不变。
+- 用户问「怎么装 / 装在哪 / 同事怎么用」直接答上面三条，别再翻其他文档。
+
 ## 用途
 
-把一批待发 FBA 货物，从三份原始资料变成可直接对外的三张表 + 一张校验报告：
+把一批待发 FBA 货物，从**箱唛 + 报价**两份原始资料变成可直接对外的三张表 + 一张校验报告：
 
 | 输入 | 输出 |
 |---|---|
@@ -543,6 +556,8 @@ python scripts/send_robot.py --manifest "..." --webhook "https://..." --send --c
   原始表更新后重跑，**不要手改 CSV**。
   ⚠️ 例外：箱唛实测过的箱规（单箱数量/重量/外箱尺寸）可回写 `产品箱规.csv`，
   一旦回写就在 git 里留一句来源（「2026-11-11 箱唛实测」），因为重跑 `build_refdata.py` 会被领星旧数据覆盖。
+- `scripts/make_skill_package.py`：把两个技能打成可分发 zip（排除 `__pycache__` / `assets/_backup` /
+  `assets/links.json`，保留 `config.json` 与三份参照库）。发版后覆盖上传同一 `file_token`，下载链接不变。
 - `scripts/sync_vault.py`：把 SKILL.md 同步成 Obsidian 库里的技能笔记（`30 Skills 技能库/本地Skills/`），
   技能改完跑一次，笔记别手改正文。
 - `scripts/sync_feishu.py`：把 `使用说明.md` 覆盖到飞书在线文档（地址在 `assets/links.json`），
