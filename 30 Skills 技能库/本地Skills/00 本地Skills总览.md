@@ -1,18 +1,18 @@
 ---
 title: 00 本地Skills总览
 type: moc
-updated: 2026-11-06
+updated: 2026-11-11
 tags: [skill, moc, workbuddy, 我的skill]
 ---
 
 # 本地 Skills 总览
 
-本机 `~/.workbuddy/skills/` 共 **11 个**技能中已判定来源的 11 个：
-**🟢 自建 5 个** · 🟡 第三方+本地适配 2 个 · ⚪ 第三方原样 4 个。
+本机 `~/.workbuddy/skills/` 共 **30 个**技能目录（其中 15 个为 ziniao 导入），本库已判定来源并收录 **12 个**：
+**🟢 自建 6 个** · 🟡 第三方+本地适配 2 个 · ⚪ 第三方原样 4 个。
 
 原始文件仍是唯一事实来源，本库只做索引与全文备份。改规则请改本地 skill，再重跑 `build_skill_notes.py` 同步。
 
-## 🟢 我个人创建（5）
+## 🟢 我个人创建（6）
 
 | Skill | 一句话 |
 |---|---|
@@ -21,6 +21,7 @@ tags: [skill, moc, workbuddy, 我的skill]
 | [[lingxing-fba-carrier-compare\|`lingxing-fba-carrier-compare`]] | 同一批货、两家货代整批比价：每家各仓取最便宜含税海卡渠道，加总成整批合计运费，输出差额、差额占比、时效与一句话结论。 |
 | [[lingxing-fba-shipping-plan\|`lingxing-fba-shipping-plan`]] | 装箱单 + 货件列表 + 一家货代报价，自动产出出货明细（含最优渠道/单价/时效）、恒信报关发票（40 列）、仓库贴标备注对接表，并能把箱唛按票发到工厂对接群。 |
 | [[amazon-report-archive\|`amazon-report-archive`]] | 把亚马逊后台下载的回款/超库龄/仓储费/广告报表按规范名归档，并生成「N月回款备注.xlsx」与「N月利润核对表.xlsx」；缺数据一律留空不编造。 |
+| [[amazon-kpi-monthly-review\|`amazon-kpi-monthly-review`]] | 按当月模板核算运营岗绩效考核表（销售额/抽查二款/长仓费/产品知识/领星下单/封样），产出带公式附表与凭证截图的 xlsx；只生成文件，不代发。 |
 
 > 判定依据：`SKILL.md` 带 `agent_created: true`，或内容只对本机成立（你自己的飞书 tenant / 领星字段 / 本机 MCP 前缀 / 本项目复盘），且无上游仓库痕迹。
 
@@ -72,6 +73,7 @@ tags: [skill, moc, workbuddy, 我的skill]
 ### 财务 / 报表
 
 - 🟢 [[amazon-report-archive]] — 归档本月报表、整理月度报表、生成利润核对表、做回款备注、跑一下 N 月的表
+- 🟢 [[amazon-kpi-monthly-review]] — 核算 M 月绩效、填绩效考核表、抽查款达成率、运营岗考核、按模板填绩效表
 
 ## 飞书链接汇总
 
@@ -102,3 +104,5 @@ tags: [skill, moc, workbuddy, 我的skill]
 
 - `ziniao-*` 系列 15 个（紫鸟 / OpenAPI 导入，同一秒创建，非自建）暂未归档
 - `amazon-ads-empty-plate-composite` 上游未留链接，来源待确认
+- `amazon-a-plus-content`、`amazon-listing-images` 本地已存在但本库尚无对应笔记，待补
+- **跨库约定（2026-11-11）**：skill 的交付边界到「生成文件」为止，对外发送（飞书 / 邮件 / IM）一律由用户本人操作，不做浏览器或 UI 代发
