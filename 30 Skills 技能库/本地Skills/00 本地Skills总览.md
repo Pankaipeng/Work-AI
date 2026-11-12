@@ -1,18 +1,18 @@
 ---
 title: 00 本地Skills总览
 type: moc
-updated: 2026-11-11
+updated: 2026-11-12
 tags: [skill, moc, workbuddy, 我的skill]
 ---
 
 # 本地 Skills 总览
 
-本机 `~/.workbuddy/skills/` 共 **30 个**技能目录（其中 15 个为 ziniao 导入），本库已判定来源并收录 **12 个**：
-**🟢 自建 6 个** · 🟡 第三方+本地适配 2 个 · ⚪ 第三方原样 4 个。
+本机 `~/.workbuddy/skills/` 共 **32 个**技能目录（其中 17 个为 ziniao 导入），本库已判定来源并收录 **13 个**：
+**🟢 自建 7 个** · 🟡 第三方+本地适配 2 个 · ⚪ 第三方原样 4 个。
 
-原始文件仍是唯一事实来源，本库只做索引与全文备份。改规则请改本地 skill，再重跑 `build_skill_notes.py` 同步。
+原始文件仍是唯一事实来源，本库只做索引与全文备份。改规则请改本地 skill，再重跑各自的 `sync_vault.py` 同步。
 
-## 🟢 我个人创建（6）
+## 🟢 我个人创建（7）
 
 | Skill | 一句话 |
 |---|---|
@@ -22,6 +22,7 @@ tags: [skill, moc, workbuddy, 我的skill]
 | [[lingxing-fba-shipping-plan\|`lingxing-fba-shipping-plan`]] | 装箱单 + 货件列表 + 一家货代报价，自动产出出货明细（含最优渠道/单价/时效）、恒信报关发票（40 列）、仓库贴标备注对接表，并能把箱唛按票发到工厂对接群。 |
 | [[amazon-report-archive\|`amazon-report-archive`]] | 把亚马逊后台下载的回款/超库龄/仓储费/广告报表按规范名归档，并生成「N月回款备注.xlsx」与「N月利润核对表.xlsx」；缺数据一律留空不编造。 |
 | [[amazon-kpi-monthly-review\|`amazon-kpi-monthly-review`]] | 按当月模板核算运营岗绩效考核表（销售额/抽查二款/长仓费/产品知识/领星下单/封样），产出带公式附表与凭证截图的 xlsx；只生成文件，不代发。 |
+| [[lingxing-purchase-plan-import\|`lingxing-purchase-plan-import`]] | 把飞书多子表采购台账里属于某位运营的行，按领星「导入计划采购商品」13 列模板转成可导入 xlsx：字段映射、店铺名换算成领星口径（巨杉美国→巨杉-US）、箱数×装箱规格=计划采购量 自检。 |
 
 > 判定依据：`SKILL.md` 带 `agent_created: true`，或内容只对本机成立（你自己的飞书 tenant / 领星字段 / 本机 MCP 前缀 / 本项目复盘），且无上游仓库痕迹。
 
@@ -70,6 +71,10 @@ tags: [skill, moc, workbuddy, 我的skill]
 - 🟢 [[lingxing-fba-carrier-compare]] — 比价、哪家便宜、货代报价对比、两家运费差多少、整批走哪家
 - 🟢 [[lingxing-fba-shipping-plan]] — 领星发货计划、装箱单转发票、报关发票、贴标备注、仓库对接表、指定货代出计划
 
+### 供应链 / 采购
+
+- 🟢 [[lingxing-purchase-plan-import]] — 领星采购计划导入、采购单导入模板、年前采购下单表、飞书台账转领星、按模板填采购单
+
 ### 财务 / 报表
 
 - 🟢 [[amazon-report-archive]] — 归档本月报表、整理月度报表、生成利润核对表、做回款备注、跑一下 N 月的表
@@ -103,7 +108,7 @@ tags: [skill, moc, workbuddy, 我的skill]
 
 ## 未收录说明（仅备注，非待办）
 
-- `ziniao-*` 系列 15 个（紫鸟 / OpenAPI 导入，同一秒创建，非自建）暂未归档
+- `ziniao-*` 系列 17 个（紫鸟 / OpenAPI 导入，同一秒创建，非自建）暂未归档
 - `amazon-ads-empty-plate-composite` 上游未留链接，来源待确认
 - `amazon-a-plus-content`、`amazon-listing-images` 本地已存在但本库尚无对应笔记，待补
 - **跨库约定（2026-11-11）**：skill 的交付边界到「生成文件」为止，对外发送（飞书 / 邮件 / IM）一律由用户本人操作，不做浏览器或 UI 代发
