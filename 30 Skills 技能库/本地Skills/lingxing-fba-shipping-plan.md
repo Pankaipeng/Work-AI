@@ -5,7 +5,7 @@ group: 供应链 / 发货
 source_level: 自建
 upstream: —（无上游，本地原创）
 local_path: C:/Users/Administrator/.workbuddy/skills/lingxing-fba-shipping-plan/
-updated: 2026-11-11
+updated: 2026-11-12
 tags: [skill, workbuddy, 自建, 领星, 我的skill]
 ---
 
@@ -15,7 +15,7 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 > 把 FBA 箱唛（自动解析成装箱明细）、领星货件（FBA号/PO/仓库，走 MCP 直接取）与**一家**货代的周报价表，自动生成 FBA 发货计划——出货明细（含该货代最优渠道/单价/时效）、恒信报关发票（55 列完整版）、仓库贴标备注对…
 
 > **本笔记由 `scripts/sync_vault.py` 从 SKILL.md 生成**，不要手改正文；
-> 技能变更后重跑脚本即可。生成时间 2026-11-11。
+> 技能变更后重跑脚本即可。生成时间 2026-11-12。
 
 ## 速览
 
@@ -26,8 +26,8 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 | 分组 | 供应链 / 发货 |
 | 调用 | `@lingxing-fba-shipping-plan` |
 | 本地路径 | `C:/Users/Administrator/.workbuddy/skills/lingxing-fba-shipping-plan/` |
-| SKILL.md | 479 行 |
-| 最后更新 | 2026-11-11 |
+| SKILL.md | 481 行 |
+| 最后更新 | 2026-11-12 |
 
 ## 触发场景
 
@@ -98,10 +98,12 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 
 - 技能包（含本技能 + `lingxing-fba-carrier-compare` 比价技能）：
   https://bqnscp788os.feishu.cn/file/TjEMbEqYvoyu7uxmv2pcqVoOn5c （约 300KB）
-- 同事装法：解压后把两个文件夹放到 `<用户名>/.workbuddy/skills/`（只一层同名目录），
-  `pip install openpyxl pypdf`，重启 WorkBuddy。详见本目录 `安装说明.md`。
-- 改完技能要重新发版：`python scripts/make_skill_package.py --out <zip>` 打包，
-  再用同一个 `file_token` 覆盖上传（地址记在 `assets/links.json`），链接不变。
+- 同事装法（一句话）：把技能包**拖进 WorkBuddy 对话框**，说「安装本技能包及其依赖」——
+  包根目录有 `AI-安装指令.md`，AI 会自己解压、复制到 `<用户名>/.workbuddy/skills/`（只一层同名目录）、
+  `pip install openpyxl pypdf`、自检并汇报，最后提醒重启。
+  用户明确要手动装时，再让他解压放目录 + 装依赖 + 重启，详见本目录 `安装说明.md` 2.2。
+- 改完技能要重新发版：`python scripts/make_skill_package.py --out <zip>` 打包（会自动把 `AI-安装指令.md`
+  写进包根目录），再用同一个 `file_token` 覆盖上传（地址记在 `assets/links.json`），链接不变。
 - 用户问「怎么装 / 装在哪 / 同事怎么用」直接答上面三条，别再翻其他文档。
 
 ## 用途
