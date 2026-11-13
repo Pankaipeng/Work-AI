@@ -11,12 +11,14 @@
             "id": "47adc74eed2823c5",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/亚马逊文案skills思维导图.md"
+                "file": "00 To Do 待办/待办清单.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "亚马逊文案skills思维导图"
+              "icon": "lucide-file",
+              "title": "待办清单"
             }
           }
         ]
@@ -204,10 +206,11 @@
   },
   "active": "47adc74eed2823c5",
   "lastOpenFiles": [
-    "30 Skills 技能库/本地Skills/listing-orchestrator.md",
-    "Excalidraw/亚马逊文案skills思维导图.md",
-    "30 Skills 技能库/文案Skills.md",
     "00 To Do 待办/Skills库搭建.md",
+    "00 To Do 待办/库体检-2026-11-06.md",
+    "Excalidraw/亚马逊文案skills思维导图.md",
+    "30 Skills 技能库/本地Skills/listing-orchestrator.md",
+    "30 Skills 技能库/文案Skills.md",
     "00 To Do 待办/待办清单.md",
     "网页AI摘要总结.md",
     "30 Skills 技能库/本地Skills/lingxing-purchase-plan-import.md",
@@ -223,7 +226,6 @@
     "20 Knowledge 知识点/领星MCP.md",
     "10 Inbox 资料库/(313) 亚马逊Listing图片全链路拆解：从主图到A+，每一张图到底需要展现什么 - 知无不言跨境电商社区.md",
     "10 Inbox 资料库",
-    "00 To Do 待办/库体检-2026-11-06.md",
     "20 Knowledge 知识点/AI agent.md",
     "01 Maps 导航/AI常用工具汇总.md",
     "01 Maps 导航/AI模型常用.md",
