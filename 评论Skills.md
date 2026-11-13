@@ -1,1 +1,0 @@
-- [CoderAndyLee/amz-review-analysis-skill](https://github.com/CoderAndyLee/amz-review-analysis-skill)
