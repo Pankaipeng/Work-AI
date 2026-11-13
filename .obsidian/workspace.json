@@ -8,15 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "47adc74eed2823c5",
+            "id": "f32504abf4495974",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/亚马逊文案skills思维导图.md"
+                "file": "评论Skills.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "亚马逊文案skills思维导图"
+              "icon": "lucide-file",
+              "title": "评论Skills"
             }
           }
         ]
@@ -202,24 +204,25 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "47adc74eed2823c5",
+  "active": "f32504abf4495974",
   "lastOpenFiles": [
-    "30 Skills 技能库/搜索词Skills.md",
+    "AI Agent常用.md",
     "Excalidraw/亚马逊文案skills思维导图.md",
+    "评论Skills.md",
+    "30 Skills 技能库/搜索词Skills.md",
+    "30 Skills 技能库/图片Skills.md",
     "30 Skills 技能库/文案Skills.md",
+    "30 Skills 技能库/选品Skills.md",
     "00 To Do 待办/待办清单.md",
     "00 To Do 待办/Skills库搭建.md",
     "00 To Do 待办/库体检-2026-11-06.md",
     "30 Skills 技能库/本地Skills/listing-orchestrator.md",
     "网页AI摘要总结.md",
     "30 Skills 技能库/本地Skills/lingxing-purchase-plan-import.md",
-    "AI Agent常用.md",
     "30 Skills 技能库/本地Skills/amazon-kpi-monthly-review.md",
     "10 Inbox 资料库/(314) 什么样的运营才算会AI的运营？用AI做运营的底层逻辑是什么？ - 知无不言跨境电商社区.md",
-    "30 Skills 技能库/选品Skills.md",
     "卖点提炼卖点排序Skills.md",
     "Excalidraw",
-    "30 Skills 技能库/图片Skills.md",
     "30 Skills 技能库/广告Skills.md",
     "20 Knowledge 知识点/领星MCP.md",
     "10 Inbox 资料库/(313) 亚马逊Listing图片全链路拆解：从主图到A+，每一张图到底需要展现什么 - 知无不言跨境电商社区.md",
@@ -231,7 +234,6 @@
     "30 Skills 技能库/本地Skills/00 本地Skills总览.md",
     "01 Maps 导航/亚马逊运营Skills.md",
     "30 Skills 技能库/本地Skills/amazon-report-archive.md",
-    "30 Skills 技能库/本地Skills/lingxing-fba-carrier-compare.md",
     "30 Skills 技能库/本地Skills",
     "AI",
     "新建 文本文档.txt",
