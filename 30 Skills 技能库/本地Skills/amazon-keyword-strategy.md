@@ -5,7 +5,7 @@ group: 关键词 / 选品
 source_level: 第三方
 upstream: github.com/buluslan/amazon-keyword-strategy · MIT（公众号：新西楼.AI）
 local_path: C:/Users/Administrator/.workbuddy/skills/amazon-keyword-strategy/
-updated: 2026-10-30
+updated: 2026-11-13
 tags: [skill, workbuddy, 第三方, amazon]
 ---
 
@@ -25,7 +25,16 @@ tags: [skill, workbuddy, 第三方, amazon]
 | 内部标题 | Amazon Keyword Strategy |
 | 本地路径 | `C:/Users/Administrator/.workbuddy/skills/amazon-keyword-strategy/` |
 | SKILL.md | 126 行 |
-| 最后更新 | 2026-10-30 |
+| 最后更新 | 2026-11-13 |
+| 导出包 | `dist/amazon-keyword-strategy-v0.4.0.zip`（2.7 MB / 25 文件）|
+
+> [!tip] 📦 导出包（可分发状态，2026-11-13 打包）
+> - 压缩包：`D:/Workbuddy/WP650/dist/amazon-keyword-strategy-v0.4.0.zip`
+> - 校验：`amazon-keyword-strategy-v0.4.0.zip.sha256`
+> - SHA256：`0ec975e44a94329d9e5cc3632783728c07aa8422ae3bf7ee720f77184d3a1e4c`
+> - 结构：解压后根目录为 `amazon-keyword-strategy/`，含 `SKILL.md` + `references/`(7) + `scripts/`(9) + `assets/`(3) + `LICENSE` / `README.md` / `evals/` / `.gitignore`
+> - 已排除：`__pycache__` / `.git` / `*.pyc` / `.DS_Store`；zip CRC 校验通过
+> - 安装：解压到 `C:/Users/Administrator/.workbuddy/skills/` 下即可被识别
 
 ## 触发场景
 

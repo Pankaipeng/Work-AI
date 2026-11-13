@@ -40,7 +40,7 @@ tags: [skill, moc, workbuddy, 我的skill]
 | Skill | 一句话 | 来源 |
 |---|---|---|
 | [[amazon-listing-skill\|`amazon-listing-skill`]] | 合规向的 Listing 写作与审计：各站点（含沙特、埃及、土耳其、阿联酋）标题/五点/描述/后台 Search Terms 的字数、禁词、商标敏感度规则库。 | **第三方** |
-| [[amazon-keyword-strategy\|`amazon-keyword-strategy`]] | 从竞品或自家 ASIN 反查出词，判标品/非标品，做词根六分类，最后输出逐词带打法（主攻/截流/否定）的广告作战图。 | **第三方** |
+| [[amazon-keyword-strategy\|`amazon-keyword-strategy`]] | 从竞品或自家 ASIN 反查出词，判标品/非标品，做词根六分类，最后输出逐词带打法（主攻/截流/否定）的广告作战图。📦 已打包 `v0.4.0`（2026-11-13） | **第三方** |
 | [[amazon-ads-creative-assets\|`amazon-ads-creative-assets`]] | 端到端做广告创意素材：按规格生成合规图片（商品图/场景图/品牌 logo/展示广告横幅）与广告文案，再通过 Amazon Ads MCP 的 creative assets API 注册、版本化、查状态。 | **第三方** |
 | [[amazon-ads-empty-plate-composite\|`amazon-ads-empty-plate-composite`]] | 专治「AI 把产品结构画歪」：先生成空镜场景，再抠真实产品照片合成，让滑轨、卡扣、铰链、磁吸这类机械结构严格对版。 | **第三方** |
 
