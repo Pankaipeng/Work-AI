@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "1730ff403c8ac3e3",
+        "id": "e64cd7381623d6ac",
         "type": "tabs",
         "children": [
           {
-            "id": "973d65a98a1a9e66",
+            "id": "b351a983bdbcf428",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/亚马逊文案skills思维导图.md"
+                "file": "file:D:/Workbuddy/2026-11-16-13-34-50/N5打印包/00_先读这里.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "亚马逊文案skills思维导图"
+              "icon": "lucide-file",
+              "title": "00_先读这里"
             }
           }
         ]
@@ -202,10 +204,14 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "973d65a98a1a9e66",
+  "active": "b351a983bdbcf428",
   "lastOpenFiles": [
+    "file:D:/Workbuddy/2026-11-16-13-34-50/N5打印包/05_历年真题（回忆版）/00-清单-先读这个.md",
+    "file:D:/Workbuddy/2026-11-16-13-34-50/N5打印包/00_先读这里.md",
     "30 Skills 技能库/文案Skills.md",
+    "file:C:/Users/Administrator/DoubaoWork/chats/2026-11-16/new-chat/N5打印包/历年真题/00-清单-先读这个.md",
     "Excalidraw/亚马逊文案skills思维导图.md",
+    "file:C:/Users/Administrator/DoubaoWork/chats/2026-11-16/new-chat/N5打印包/历年真题来源索引.md",
     "链接诊断Skills.md",
     "30 Skills 技能库/广告Skills.md",
     "30 Skills 技能库/选品Skills.md",
@@ -226,12 +232,8 @@
     "30 Skills 技能库/评论Skills.md",
     "30 Skills 技能库/本地Skills/listing-orchestrator.md",
     "30 Skills 技能库/本地Skills/lingxing-purchase-plan-import.md",
-    "30 Skills 技能库/本地Skills/amazon-kpi-monthly-review.md",
     "Excalidraw",
-    "20 Knowledge 知识点/领星MCP.md",
     "10 Inbox 资料库",
-    "20 Knowledge 知识点/AI agent.md",
-    "01 Maps 导航/AI常用工具汇总.md",
     "30 Skills 技能库/本地Skills",
     "AI",
     "新建 文本文档.txt",
