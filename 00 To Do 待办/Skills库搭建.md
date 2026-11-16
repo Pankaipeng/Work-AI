@@ -8,6 +8,7 @@ updated: 2026-11-06
 ## Skills搜寻优先级
 
 1. 广告词架构；
+	1. 广告架构自动搭建 SOP： 基于上面跑出来的词库，结合我们预设好的广告策略（比如只打精准），用脚本直接生成一份符合亚马逊 （批量上传）格式的 Excel 文件。直接把匹配方式、初始竞价逻辑全自动算好填进去，拿过来复核一眼就能直接上传后台
 2. [x] 搜索词拓展；/广告词扩展 ✅ 2026-11-06
 	1. 两个方向，一个是建词库写listing; 一个是广告词优化和打法搭建；
 	2. 建词库写listing：用deepseek跑数据，然后喂给chatgpt写文案；[amazon-listing-skill/SKILL.md at main · sanshiliu-studio/amazon-listing-skill](https://github.com/sanshiliu-studio/amazon-listing-skill/blob/main/SKILL.md) 3个skill混用，有一个市场调查的打底，需要重建
