@@ -1,18 +1,18 @@
 ---
 title: 00 本地Skills总览
 type: moc
-updated: 2026-11-12
+updated: 2026-11-16
 tags: [skill, moc, workbuddy, 我的skill]
 ---
 
 # 本地 Skills 总览
 
-本机 `~/.workbuddy/skills/` 共 **32 个**技能目录（其中 17 个为 ziniao 导入），本库已判定来源并收录 **13 个**：
-**🟢 自建 7 个** · 🟡 第三方+本地适配 2 个 · ⚪ 第三方原样 4 个。
+本机 `~/.workbuddy/skills/` 共 **34 个**技能目录（其中 17 个为 ziniao 导入），本库已判定来源并收录 **14 个**：
+**🟢 自建 8 个** · 🟡 第三方+本地适配 2 个 · ⚪ 第三方原样 4 个。
 
 原始文件仍是唯一事实来源，本库只做索引与全文备份。改规则请改本地 skill，再重跑各自的 `sync_vault.py` 同步。
 
-## 🟢 我个人创建（7）
+## 🟢 我个人创建（8）
 
 | Skill | 一句话 |
 |---|---|
@@ -25,6 +25,8 @@ tags: [skill, moc, workbuddy, 我的skill]
 | [[lingxing-purchase-plan-import\|`lingxing-purchase-plan-import`]] | 把飞书多子表采购台账里属于某位运营的行，按领星「导入计划采购商品」13 列模板转成可导入 xlsx：字段映射、店铺名换算成领星口径（巨杉美国→巨杉-US）、箱数×装箱规格=计划采购量 自检。 |
 
 > 判定依据：`SKILL.md` 带 `agent_created: true`，或内容只对本机成立（你自己的飞书 tenant / 领星字段 / 本机 MCP 前缀 / 本项目复盘），且无上游仓库痕迹。
+
+| [[wearesellers-to-obsidian\|`wearesellers-to-obsidian`]] | 把知无不言帖子连同评论区全文归档到 Obsidian「10 Inbox 资料库」，结构固定为「**要点提炼置顶** → 正文 → 评论区」；走已登录 Chrome 全选复制 + 读剪贴板，不截图不爬空列表。 |
 
 ## 🟡 第三方 + 本地适配（2）
 
@@ -79,6 +81,10 @@ tags: [skill, moc, workbuddy, 我的skill]
 
 - 🟢 [[amazon-report-archive]] — 归档本月报表、整理月度报表、生成利润核对表、做回款备注、跑一下 N 月的表
 - 🟢 [[amazon-kpi-monthly-review]] — 核算 M 月绩效、填绩效考核表、抽查款达成率、运营岗考核、按模板填绩效表
+
+### 笔记 / 归档
+
+- 🟢 [[wearesellers-to-obsidian]] — 知无不言帖子归档、含评论区、整理到 obsidian、要点提炼置顶
 
 ## 飞书链接汇总
 
