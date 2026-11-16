@@ -1,0 +1,2 @@
+- [nospicyplease/amazon-ppc-advanced-skills](https://github.com/nospicyplease/amazon-ppc-advanced-skills?utm_source=chatgpt.com)
+- [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills?utm_source=chatgpt.com) #利润诊断 #文案诊断

@@ -1,7 +1,7 @@
 ## 浏览器原生
 
 - edge: copilot(感觉一般，操作繁琐，但支持评论区，且原生)
-- chrome: gemini
+- chrome: gemini（还行，只有电脑端）
 
 ## 浏览器插件
 - kimi网页插件（中文支持较好，免费版有额度上限）
