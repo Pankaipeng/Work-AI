@@ -11,12 +11,14 @@
             "id": "f32504abf4495974",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/亚马逊文案skills思维导图.md"
+                "file": "30 Skills 技能库/图片Skills.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "亚马逊文案skills思维导图"
+              "icon": "lucide-file",
+              "title": "图片Skills"
             }
           }
         ]
@@ -202,17 +204,17 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "f32504abf4495974",
+  "active": "d355f15cf7cc6bd7",
   "lastOpenFiles": [
+    "30 Skills 技能库/图片Skills.md",
+    "00 To Do 待办/待办清单.md",
+    "Excalidraw/亚马逊文案skills思维导图.md",
     "10 Inbox 资料库/(123523) 开源分享下codex+listing一键生成的实操经验，怎样让listing真正可用 - 知无不言跨境电商社区.md",
     "30 Skills 技能库/评论Skills.md",
     "30 Skills 技能库/文案Skills.md",
     "AI Agent常用.md",
-    "Excalidraw/亚马逊文案skills思维导图.md",
     "30 Skills 技能库/搜索词Skills.md",
-    "30 Skills 技能库/图片Skills.md",
     "30 Skills 技能库/选品Skills.md",
-    "00 To Do 待办/待办清单.md",
     "00 To Do 待办/Skills库搭建.md",
     "00 To Do 待办/库体检-2026-11-06.md",
     "30 Skills 技能库/本地Skills/listing-orchestrator.md",
