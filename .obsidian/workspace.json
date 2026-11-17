@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d5e2fa1abce70362",
+            "id": "aeca2e8083cd0a29",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "file:D:/Workbuddy/spaces/2026_11_16_14-40-04/关键词调研/skills/modules/50-copy/references/03-格式边界.md",
+                "file": "20 Knowledge 知识点/vibe coding.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03-格式边界"
+              "title": "vibe coding"
             }
           }
         ]
@@ -204,13 +204,15 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "d5e2fa1abce70362",
+  "active": "c85c97fe5cfb50bb",
   "lastOpenFiles": [
+    "Excalidraw/亚马逊文案skills思维导图.md",
+    "20 Knowledge 知识点/vibe coding.md",
+    "file:D:/Workbuddy/spaces/2026_11_16_14-40-04/关键词调研/skills/modules/50-copy/references/03-格式边界.md",
     "AI Agent常用.md",
     "20 Knowledge 知识点/AI agent.md",
     "file:D:/Workbuddy/spaces/2026_11_16_14-40-04/迁移包-ClaudeCode/04-给ClaudeCode的提示词.md",
     "30 Skills 技能库/文案Skills.md",
-    "Excalidraw/亚马逊文案skills思维导图.md",
     "file:D:/Workbuddy/2026-11-16-13-34-50/N5打印包/00_先读这里.md",
     "file:D:/Workbuddy/2026-11-16-13-34-50/N5打印包/05_历年真题（回忆版）/00-清单-先读这个.md",
     "file:C:/Users/Administrator/DoubaoWork/chats/2026-11-16/new-chat/N5打印包/历年真题/00-清单-先读这个.md",
@@ -230,8 +232,6 @@
     "30 Skills 技能库/搜索词Skills.md",
     "00 To Do 待办/库体检-2026-11-06.md",
     "00 To Do 待办/待办清单.md",
-    "30 Skills 技能库/图片Skills.md",
-    "30 Skills 技能库/评论Skills.md",
     "Excalidraw",
     "10 Inbox 资料库",
     "30 Skills 技能库/本地Skills",
