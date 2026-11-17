@@ -1,2 +1,3 @@
-- Claude Code
-- Workbuddy
+- Claude Code（写代码和skill能力强，但调度费api贵，烧token）
+- Workbuddy（办公方面执行和理解能力强，写代码理解能力差点）
+- 豆包工作 （联网搜索能力还行，执行能力不行）
