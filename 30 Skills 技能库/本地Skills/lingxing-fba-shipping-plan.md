@@ -5,7 +5,7 @@ group: 供应链 / 发货
 source_level: 自建
 upstream: —（无上游，本地原创）
 local_path: C:/Users/Administrator/.workbuddy/skills/lingxing-fba-shipping-plan/
-updated: 2026-11-12
+updated: 2026-11-18
 tags: [skill, workbuddy, 自建, 领星, 我的skill]
 ---
 
@@ -15,7 +15,7 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 > 把 FBA 箱唛（自动解析成装箱明细）、领星货件（FBA号/PO/仓库，走 MCP 直接取）与**一家**货代的周报价表，自动生成 FBA 发货计划——出货明细（含该货代最优渠道/单价/时效）、恒信报关发票（55 列完整版）、仓库贴标备注对…
 
 > **本笔记由 `scripts/sync_vault.py` 从 SKILL.md 生成**，不要手改正文；
-> 技能变更后重跑脚本即可。生成时间 2026-11-12。
+> 技能变更后重跑脚本即可。生成时间 2026-11-18。
 
 ## 速览
 
@@ -26,8 +26,8 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 | 分组 | 供应链 / 发货 |
 | 调用 | `@lingxing-fba-shipping-plan` |
 | 本地路径 | `C:/Users/Administrator/.workbuddy/skills/lingxing-fba-shipping-plan/` |
-| SKILL.md | 481 行 |
-| 最后更新 | 2026-11-12 |
+| SKILL.md | 525 行 |
+| 最后更新 | 2026-11-18 |
 
 ## 触发场景
 
@@ -38,7 +38,7 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 | 用途 | 说明 | 链接 |
 |---|---|---|
 | 使用说明 | 在线版，永远最新；由 scripts/sync_feishu.py 从 使用说明.md 覆盖更新 | https://bqnscp788os.feishu.cn/docx/LdkbdfqYkoLES1xoRpHcjyQ8nuh |
-| 技能包 | 约 300KB，含发货计划 + 比价两个技能；由 scripts/make_skill_package.py 打包，改动后重新打包并覆盖上传同一个 file_token | https://bqnscp788os.feishu.cn/file/TjEMbEqYvoyu7uxmv2pcqVoOn5c |
+| 技能包 | 约 306KB，含发货计划 + 比价两个技能；由 scripts/make_skill_package.py 打包后用 lark-cli drive +upload --file-token <本文件 token> 覆盖上传，链接不变 | https://bqnscp788os.feishu.cn/file/ItqDbFWXno8eCyxPLLtcYrWvnBe |
 
 
 ## 内容结构
@@ -62,6 +62,7 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 - `references/business-rules.md`
 - `references/field-mapping.md`
 - `references/input-schemas.md`
+- `references/lessons-log.md`
 - `references/notice-template.md`
 - `references/quote-rules.md`
 - `scripts/attachments.py`
@@ -96,8 +97,29 @@ tags: [skill, workbuddy, 自建, 领星, 我的skill]
 
 ## 安装与分发
 
+### 前置依赖：领星 MCP 必须先装好（否则本技能跑不动）
+
+货件数据（FBA 号 / PO / 仓库 / 地址 / 申报量）和提货地点（发货仓库）**只走领星 MCP 取**，
+没有它就只能让用户去亚马逊后台导出，本技能的核心自动化等于废掉一半。所以开跑前先确认：
+
+```text
+list_installed_plugins(type="connector")        # 期望看到 lingxing-mcp，status=connected
+mcp__lingxing-mcp__help(query="货件")            # 能返回 get_fba_shipment_list 才算真通
+```
+
+装法（第一次用，用户自己点 3 步，2 分钟）：
+
+1. WorkBuddy 左下角 **＋ → 连接器**，搜索「**领星**」，装 **领星ERP**（`lingxing-mcp`）；
+2. 点「连接 / 授权」，登录领星账号（用能看 FBA 货件与发货计划的那个账号），授权后状态应为 `connected`；
+3. 新开会话，让 AI 试取一次货件（`get_fba_shipment_list`，当天日期，只取 1 条）验证通不通。
+
+排查：状态 `connected` 但调用报权限错 → 是领星账号没有该店铺的货件/计划权限，不是技能问题；
+报鉴权失败 → 在连接器里重新授权一次。**这两类都不要改用浏览器抓取来绕过**（见下节硬规则）。
+
+### 技能包分发
+
 - 技能包（含本技能 + `lingxing-fba-carrier-compare` 比价技能）：
-  https://bqnscp788os.feishu.cn/file/TjEMbEqYvoyu7uxmv2pcqVoOn5c （约 300KB）
+  https://bqnscp788os.feishu.cn/file/ItqDbFWXno8eCyxPLLtcYrWvnBe （约 300KB）
 - 同事装法（一句话）：把技能包**拖进 WorkBuddy 对话框**，说「安装本技能包及其依赖」——
   包根目录有 `AI-安装指令.md`，AI 会自己解压、复制到 `<用户名>/.workbuddy/skills/`（只一层同名目录）、
   `pip install openpyxl pypdf`、自检并汇报，最后提醒重启。
@@ -351,9 +373,13 @@ python scripts/build_plan.py \
 
 **按提货点拆批发（`notice.split_by_pickup`，默认开）**：一批货里同时有「工厂直发-XX」和「中山青吉仓库」时，
 不要混成整批一条条发，而是**按提货点分成多个批次，一批发完再发下一批，批内仍是一票一条+紧跟附件**。
-同一票会在这两个批次各出现一次，小标题保留 `店铺第N票FBAxxx共X件(发XX物流)`，其中**件数写本批次的箱数**
-（第1票厨之乐那批 3 件、中吉那批 3 件，合计整票 6 件）；附件在该批内各带一份（同一 PDF 只上传一次）。
-不要拆时加 `--no-split-by-pickup`。
+同一票会在这两个批次各出现一次，小标题保留 `店铺第N票FBAxxx共X箱Y件(发XX物流)`，
+其中**箱数、件数都写本批次的值**（第1票厨之乐那批 3 箱 120 件、中吉那批 3 箱 108 件，合计整票 6 箱 228 件）；
+附件在该批内各带一份（同一 PDF 只上传一次）。不要拆时加 `--no-split-by-pickup`。
+
+**箱数≠件数**：`{箱数}` 是打几箱，`{件数}` 是多少 PCS。历史模板把箱数印在「件」后面（`WP56共3件` 实为 3 箱 240 件），
+工厂会按件点货而点错，已统一修正为 `WP56共3箱240件`。文案只有 `shipment_title`/`shipment_row` 一套模板，
+预览 md 与发送 text 同源；**推送时禁止临时改写文案**，要改就改 `config.json` 再重新生成预览。
 
 ```bash
 # 第一步只生成预览，不发（--labels 指向箱唛/唛头 PDF 目录，可给多个）
@@ -526,6 +552,17 @@ python scripts/send_robot.py --manifest "..." --webhook "https://..." --send --c
   40 列精简版货代系统不收，`invoice.extend_to_fba_order_detail` 保持 `true`。
 - **一手货件数据只认领星 `get_fba_shipment_list`**：FBA 号、PO（`reference_id`）、仓库代码、地址、申报量
   全从它取，不再靠亚马逊后台导出或手抄截图；亚马逊导出只在没 JSON 时兼容。
+- **PO（`reference_id`）建 STA 后约 25~30 分钟才同步**：刚建完取是空的，别立刻让用户去亚马逊手抄。
+  正确做法是等一轮重取（这批 10:16 建单、10:47 到位），拿到后写回货件 JSON 再重跑，只重出表不改其他输入。
+- **`item_list` 可能漏 SKU 明细行**（这批 RFD2 申报 536 对、明细只加出 520）：装箱明细以**箱唛解析结果**为准，
+  `total_quantity_shipped` 只用于对账；对不上就按箱唛补齐，并在校验报告记一条。
+- **计划行可能只挂部分 SKU**：缺的那几个 SKU 取不到提货地点时，按该 SKU 的历史计划判定，写进 `--warehouse-map` CSV，
+  不要一半靠计划一半靠猜；全批提货点要能一句话说清（这批 7 个 SKU 全是「工厂直发-厨之乐」，单一提货点不拆批）。
+- **货代唛头下来后固定核对 6 项**：页数=箱数、箱号与亚马逊箱唛逐箱一致、序号 1/N 连续、FC 码与服务代码三处一致
+  （货件目的地 / 报价渠道 / 发票服务列）、邮编一致（仅 ZIP+4 后缀差异可放行）、每页条码齐全。
+  清单与实测见 `references/lessons-log.md`；核对完给结论「可用 / 需重打」，别只说「看过了」。
+- **单独出上传用发票**：除整包外固定再产 `output/<货代>导入_发票_<日期>.xlsx`（只含「发票」一个 sheet、
+  55 列、带 `*` 必填列零空值），交付时说清传哪个文件。**重跑前先留旧版**，别把已发出去的版本覆盖掉。
 - **发票「服务*」必须在服务代码白名单里**：`assets/service_codes.csv` 来自货代发票模板的「服务类型列表」，
   渠道代码对不上就本地报错（历史踩坑：`US-TRKP` 上传第 28 行才报「服务不存在」，正确是 `US-TRK`）。
 - **报关要素以 `assets/报关要素.csv` 为准**（源：`领星产品材质、报关编码确认版.xlsx`）；
@@ -546,6 +583,7 @@ python scripts/send_robot.py --manifest "..." --webhook "https://..." --send --c
 - `references/input-schemas.md`——四类输入的表头要求与降级策略
 - `references/quote-rules.md`——报价表结构、计费重、单货代选渠道与验证基线
 - `references/notice-template.md`——群通知文案模板、附件归票规则、测试流程与排错
+- `references/lessons-log.md`——**实战记录**：每批的真实上下文、用户当场提的调整、踩过的坑（**开跑前先读**）
 - `使用说明.md`——面向使用者的输入/输出清单与参数对照（可直接发给同事）
 
 ## 脚本约定
@@ -566,7 +604,14 @@ python scripts/send_robot.py --manifest "..." --webhook "https://..." --send --c
   改完使用说明跑一次，同事打开的就是最新版。
 - 报价解析在 `scripts/quote_parser.py`：按「渠道类型行（含税/不含税）+ 起收档位行 + 仓库代码列」定位区块，恒信竖排/凯琦横排都能吃；结构不匹配时退回通用表头解析。
 - 选渠道在 `Builder.select_channel`：只做同货代内比价，**不要**在这里加跨货代逻辑，那是 `lingxing-fba-carrier-compare` 的职责。
+- **三张表统一按「一票 × 一个 SKU 一行」**：装箱单是逐箱的，`merge_packing_by_sku` 在读入后立刻合并，
+  发票 / 出货明细 / 仓库对接表 / 群通知全部吃合并结果。合并只会减少行数，不会改总量——
+  出货明细的箱数合计必须仍等于总箱数（如 34 行 / 78 箱 / 3046 件），改完拿这条自查。
+  箱号在发票里用 `collapse_box_runs` 按连号段折叠（`P1-B2；P1-B5；P1-B9`），不要首尾硬折。
 - 修改口径优先改 `config.json`；改代码前先读 `quote_parser.parse_sheet` 与 `quoting.calc_charge`。
+- **每批交付完往 `references/lessons-log.md` 追加一条**（照文件末尾骨架）：上下文、用户提的调整（写清改了哪个文件）、
+  踩到的坑。用户提的调整必须落到代码/`config.json`/`references/` 里，**不许只在对话里答应**——
+  否则下批又按老逻辑跑一遍，同一个问题会被反复投诉。
 
 
 ---
