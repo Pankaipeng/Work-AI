@@ -1,4 +1,4 @@
-- Claude Code（写代码和skill能力强，但调度费api贵，烧token）
+- Claude Code（写代码和skill能力强，但调度费api贵，烧token，主动性强）
 - Workbuddy（办公方面执行和理解能力强，写代码理解能力差点）
 - 豆包工作 （联网搜索能力还行，执行能力不行）
-- chatgpt codex(代码审查)
+- chatgpt codex(代码审查，性格懒，主动性差，需要用户一直提示词)
