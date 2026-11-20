@@ -1,18 +1,17 @@
 ---
 title: 00 本地Skills总览
 type: moc
-updated: 2026-11-16
-tags: [skill, moc, workbuddy, 我的skill]
----
+updated: 2026-11-20
+tags: [skill, moc, workbuddy, 我的skill]---
 
 # 本地 Skills 总览
 
-本机 `~/.workbuddy/skills/` 共 **34 个**技能目录（其中 17 个为 ziniao 导入），本库已判定来源并收录 **15 个**：
-**🟢 自建 9 个** · 🟡 第三方+本地适配 2 个 · ⚪ 第三方原样 4 个。
+本机 `~/.workbuddy/skills/` 共 **35 个**技能目录（其中 17 个为 ziniao 导入），本库已判定来源并收录 **16 个**：
+**🟢 自建 10 个** · 🟡 第三方+本地适配 2 个 · ⚪ 第三方原样 4 个。
 
 原始文件仍是唯一事实来源，本库只做索引与全文备份。改规则请改本地 skill，再重跑各自的 `sync_vault.py` 同步。
 
-## 🟢 我个人创建（9）
+## 🟢 我个人创建（10）
 
 | Skill | 一句话 |
 |---|---|
@@ -24,6 +23,7 @@ tags: [skill, moc, workbuddy, 我的skill]
 | [[amazon-kpi-monthly-review\|`amazon-kpi-monthly-review`]] | 按当月模板核算运营岗绩效考核表（销售额/抽查二款/长仓费/产品知识/领星下单/封样），产出带公式附表与凭证截图的 xlsx；只生成文件，不代发。 |
 | [[lingxing-purchase-plan-import\|`lingxing-purchase-plan-import`]] | 把飞书多子表采购台账里属于某位运营的行，按领星「导入计划采购商品」13 列模板转成可导入 xlsx：字段映射、店铺名换算成领星口径（巨杉美国→巨杉-US）、箱数×装箱规格=计划采购量 自检。 |
 | [[amazon-purchase-order-generate\|`amazon-purchase-order-generate`]] | 把运营填的预估需求表变两份交付物：领星 13 列导入文件 + 保留原表格式的采购计划单（只留有下单的款）；只读「订单表」、取「实际下单数量」列、合计与用户口述总数核对后才出文件。 |
+| [[lingxing-shipment-plan-import\|`lingxing-shipment-plan-import`]] | 把运营填的预估需求表转成领星「导入发货计划产品（FBA仓）」19 列导入文件：只读「库存表」、自动算下下周五的发货日、取日期对上的那列「需求数量」、按 >0 筛款，只填 6 列（店铺/包装类型/MSKU/计划发货量/计划发货时间/备注），备注只对新品首发写。 |
 
 > 判定依据：`SKILL.md` 带 `agent_created: true`，或内容只对本机成立（你自己的飞书 tenant / 领星字段 / 本机 MCP 前缀 / 本项目复盘），且无上游仓库痕迹。
 
