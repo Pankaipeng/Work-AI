@@ -15,9 +15,9 @@ updated: 2026-11-06
 	3. 广告词优化和打法搭建：[marketplace/skills/zach22-1999/zach-search-term-report-analyzer/SKILL.md at main · aiskillstore/marketplace](https://github.com/aiskillstore/marketplace/blob/main/skills/zach22-1999/zach-search-term-report-analyzer/SKILL.md)
 3. [ ] 链接诊断(流量转化广告文案，全面性的综合能力，问题链接销量或利润不行，快速寻找切入口）； 
        未找到合适项目，人都没法实现sop的项目能交给ai自动化吗？
-4. [[30 Skills 技能库/选品Skills|选品Skills]];
+4. [ ] [[30 Skills 技能库/选品Skills|选品Skills]];
 5. [x] 文案优化； ✅ 2026-11-03[[文案Skills]]
-6. [ ] 卖点提炼和卖点优先级skills
+6. [x] 卖点提炼和卖点优先级skills ✅ 2026-11-20
 
 ## 个人Skills库搭建
 	

@@ -11,12 +11,14 @@
             "id": "9f3b36c7538dbe66",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/亚马逊文案skills思维导图.md"
+                "file": "00 To Do 待办/待办清单.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "亚马逊文案skills思维导图"
+              "icon": "lucide-file",
+              "title": "待办清单"
             }
           }
         ]
@@ -204,13 +206,14 @@
   },
   "active": "9f3b36c7538dbe66",
   "lastOpenFiles": [
+    "00 To Do 待办/Skills库搭建.md",
+    "00 To Do 待办/库体检-2026-11-06.md",
+    "Excalidraw/亚马逊文案skills思维导图.md",
     "30 Skills 技能库/本地Skills/lingxing-shipment-plan-import.md",
     "00 To Do 待办/待办清单.md",
     "AI Agent常用.md",
     "Opencode.md",
-    "00 To Do 待办/Skills库搭建.md",
     "30 Skills 技能库/文案Skills.md",
-    "Excalidraw/亚马逊文案skills思维导图.md",
     "10 Inbox 资料库/(123523) 开源分享下codex+listing一键生成的实操经验，怎样让listing真正可用 - 知无不言跨境电商社区.md",
     "30 Skills 技能库/选品Skills.md",
     "10 Inbox 资料库/(124280) MyLevis+12套提示词，跑通亚马逊选品-Listing-广告搭建全流程（附使用教程和Skill文件） - 知无不言跨境电商社区.md",
@@ -229,7 +232,6 @@
     "file:C:/Users/Administrator/DoubaoWork/chats/2026-11-16/new-chat/N5打印包/历年真题来源索引.md",
     "链接诊断Skills.md",
     "30 Skills 技能库/广告Skills.md",
-    "网页AI摘要总结.md",
     "Excalidraw",
     "10 Inbox 资料库",
     "30 Skills 技能库/本地Skills",
