@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 To Do 待办/待办清单.md",
+                "file": "00 To Do 待办/Skills库搭建.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "待办清单"
+              "title": "Skills库搭建"
             }
           }
         ]
@@ -204,15 +204,15 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "7f345ff325e80201",
+  "active": "d355f15cf7cc6bd7",
   "lastOpenFiles": [
+    "00 To Do 待办/Skills库搭建.md",
+    "00 To Do 待办/待办清单.md",
+    "00 To Do 待办/库体检-2026-11-06.md",
     "Excalidraw/亚马逊文案skills思维导图.md",
     "file:D:/Codex/关键词调研/outputs/github-history-cleanup-20261120/normal-publish/README.md",
-    "00 To Do 待办/待办清单.md",
     "30 Skills 技能库/图片Skills.md",
     "30 Skills 技能库/文案Skills.md",
-    "00 To Do 待办/Skills库搭建.md",
-    "00 To Do 待办/库体检-2026-11-06.md",
     "30 Skills 技能库/本地Skills/lingxing-shipment-plan-import.md",
     "AI Agent常用.md",
     "Opencode.md",
